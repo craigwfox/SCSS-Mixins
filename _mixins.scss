@@ -4,15 +4,26 @@
 	  @if $inset {
 	    -webkit-box-shadow:inset $top $left $blur $color;
 	    -moz-box-shadow:inset $top $left $blur $color;
+	    -o-box-shadow:inset $top $left $blur $color;
 	    box-shadow:inset $top $left $blur $color;
 	  } @else {
 	    -webkit-box-shadow: $top $left $blur $color;
 	    -moz-box-shadow: $top $left $blur $color;
+	    -o-box-shadow: $top $left $blur $color;
 	    box-shadow: $top $left $blur $color;
 	  }
 	}
 
+// Transitions
+	@mixin transition-wide {
+		-moz-transition:		all 1s;
+		-webkit-transition: all 1s;
+		-o-transition:			all 1s;
+		transition:					all 1s;
+	}
+
 // Animations
+
 
 // Border Radius
 	@mixin border-radius ($size:10px) {
